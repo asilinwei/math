@@ -2,7 +2,7 @@
   "name": "math",
   "version": "1.0.0",
   "description": "This is about math APIs.",
-  "main": "benchmark.js",
+  "main": "src",
   "directories": {
     "test": "test"
   },
