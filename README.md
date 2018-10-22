@@ -16,6 +16,7 @@ Return the square root of a number.
 
 [source](https://github.com/asilinwei/math/blob/master/src/sqrt.js)   
 See [Math.sqrt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt)     
+     
 Example:   
 ```
 Math._sqrt(16)
