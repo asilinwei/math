@@ -40,6 +40,7 @@ describe('Math._sqrt', function() {
             return 16;
          }
       }), 4);
+      should.equal(Math._sqrt('0x10'), 4);
    });
 
    it('should return 2.25 when the argument is 5.0625', function() {
