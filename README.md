@@ -5,7 +5,7 @@ This is a repository about math APIs.
 LinWei     
            
 Achieve some math APIs.    
-See [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).     
+See [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)     
       
 APIs:    
 ```
@@ -13,7 +13,7 @@ Math._sqrt
 ```     
 Description:    
 Return the square root of a number.     
-        
+
 [source](https://github.com/asilinwei/math/blob/master/src/sqrt.js)   
 See [Math.sqrt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt).   
 Example:   
