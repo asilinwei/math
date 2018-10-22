@@ -14,30 +14,15 @@ if (!Math._sqrt) {
          return square(sqrt) - x;
       };
 
-      var floor = function(num) {
-         var string = '' + num,
-             i = 0,
-             str = '';
+      var sqrt = function(x) {
+         var sqrt = x,
+            i = 0;
 
-         while (string[i] !== '.') {
-            str += string[i];
-            i++;
-            if (!string[i]) {
+         while (abs(diff(sqrt, x))) {
+            sqrt = (sqrt + x / sqrt) / 2;
+            if (i++ > 2e+6) {
                break;
             }
-         }    
-         return +str;
-      };
-
-      var sqrt = function(x) {
-         var dev = 1e-14,
-            sqrt = x;
-
-         while (abs(diff(sqrt, x)) > dev) {
-            sqrt = (sqrt + x / sqrt) / 2;
-         }
-         if (square(floor(sqrt)) === x) {
-            sqrt = floor(sqrt);
          }
          return sqrt;
       };
