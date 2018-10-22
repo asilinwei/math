@@ -1,3 +1,29 @@
+/**
+ * 2018-10-22
+ * @copyright 2018 LinWei
+ * @author LinWei
+ *
+ * @description 
+ * Calculate the square root of a number.
+ * See (`Math.sqrt`)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt]
+ *
+ * @param {number} x A non-negative number.
+ * @return {number} Return the square root.
+ * @example
+ *
+ * Math._sqrt(16)
+ * // => 4
+ *
+ * Math._sqrt('0x10')
+ * // => 4
+ *
+ * Math._sqrt(-1)
+ * // => NaN
+ *
+ * Math._sqrt(Infinity)
+ * // => Infinity
+ */
+
 if (!Math._sqrt) {
    Math._sqrt = (function() {
       "use strict";
