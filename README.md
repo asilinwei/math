@@ -6,6 +6,8 @@ LinWei
            
 Achieve some math APIs.    
 See [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).     
+Note:     
+No support to Internet Explorer.     
       
 APIs:    
 ```
@@ -27,4 +29,21 @@ Math._sqrt('0x10')
 
 Math._sqrt(-1)
 // => NaN
-```                       
+```      
+------------------------------------------
+```
+Math._toHex
+```        
+Description:     
+Convert a number to hexadecimal sequence.      
+          
+[source](https://github.com/asilinwei/math/blob/master/src/toHex.js)        
+        
+Example:
+```
+Math._toHex(64)
+// => '40'
+
+Math._toHex(NaN)
+// => '0'
+```                          
