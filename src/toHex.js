@@ -8,6 +8,10 @@ if (!Math._toHex) {
          return number === number ? number : 0;
       };
 
+      var toString = function(value) {
+         return '' + value;
+      };
+
       var hexChar = function(num) {
          switch (num) {
             case 10:
@@ -31,6 +35,9 @@ if (!Math._toHex) {
          var result = [],
              remainder;
 
+         if (!int) {
+            return '0';
+         }
          while (int) {
             remainder = int % 16;
             result.unshift(hexChar(remainder));
@@ -54,7 +61,7 @@ if (!Math._toHex) {
             result.push(hexChar(int));
             dec = num - int;
          }
-         return result.join('');
+         return '.' + result.join('');
       };
 
       var toHex = function(num) {
@@ -62,7 +69,7 @@ if (!Math._toHex) {
              intAbs = this.floor(abs),
              integer = int(intAbs),
              decimal = dec(abs - intAbs),
-             result = integer + '.' + decimal; 
+             result = Number.isInteger(num) ? integer : integer + decimal;
 
          return num >= 0 ? result : '-' + result;
       };
@@ -72,6 +79,9 @@ if (!Math._toHex) {
             return '';
          }
          num = toNumber(num);
+         if (this.abs(num) === Infinity) {
+            return toString(num);
+         }
          return toHex.apply(this, [num]);
       };
    })();
