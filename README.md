@@ -5,7 +5,8 @@ This is a repository about math APIs.
 LinWei     
            
 Achieve some math APIs.    
-See [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).     
+See [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).   
+             
 Note:     
 No support to Internet Explorer.     
       
