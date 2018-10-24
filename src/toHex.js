@@ -1,3 +1,22 @@
+/**
+ * 2018-10-24
+ * @copyright 2018 LinWei
+ * @author LinWei
+ *
+ * @description 
+ * Convert a number to hexadecimal sequence.
+ *
+ * @param {number} num The number to be converted.
+ * @return {string} Return the hexadecimal sequence.
+ * @example
+ *
+ * Math._toHex(64)
+ * // => '40'
+ *
+ * Math._toHex(NaN)
+ * // => '0'
+ */
+
 if (!Math._toHex) {
    Math._toHex = (function() {
       "use strict";
@@ -31,6 +50,7 @@ if (!Math._toHex) {
          }
       };
 
+      // Integer part.
       var int = function(int) {
          var result = [],
              remainder;
@@ -47,6 +67,7 @@ if (!Math._toHex) {
          return result.join('');
       };
 
+      // Decimal part.
       var dec = function(dec) {
          var result = [],
              num,
