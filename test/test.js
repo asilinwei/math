@@ -126,9 +126,9 @@ describe('Math._toHex', function() {
       for (var i = -100; i <= 100; i += 1e-3) {
          should.equal(Math._toHex(i), (i).toString(16));
       }
-      should.equal(Math._toHex(2/3), (2/3).toString(16));
-      should.equal(Math._toHex(13/6), (13/6).toString(16));
-      should.equal(Math._toHex(10/3), (10/3).toString(16));
+      should.equal(Math._toHex(2 / 3), (2 / 3).toString(16));
+      should.equal(Math._toHex(13 / 6), (13 / 6).toString(16));
+      should.equal(Math._toHex(10 / 3), (10 / 3).toString(16));
    });
 
    it('should return \'Infinity\' when the argument is Infinity', function() {
