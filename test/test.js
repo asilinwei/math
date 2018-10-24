@@ -123,7 +123,7 @@ describe('Math._toHex', function() {
    });
 
    it('should return hexadecimal sequence when the argument is number', function() {
-      for (var i = -100; i <= 100; i += 1e-3) {
+      for (var i = -10; i <= 10; i += 1e-3) {
          should.equal(Math._toHex(i), (i).toString(16));
       }
       should.equal(Math._toHex(2 / 3), (2 / 3).toString(16));
