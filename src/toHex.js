@@ -56,7 +56,7 @@ if (!Math._toHex) {
              remainder;
 
          if (!int) {
-            return '0';
+            return toString(int);
          }
          while (int) {
             remainder = int % 16;
