@@ -46,7 +46,7 @@ if (!Math._toHex) {
             case 15:
                return 'f';
             default:
-               return '' + num;
+               return toString(num);
          }
       };
 
