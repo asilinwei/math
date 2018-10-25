@@ -33,20 +33,13 @@ if (!Math._toHex) {
 
       var hexChar = function(num) {
          switch (num) {
-            case 10:
-               return 'a';
-            case 11:
-               return 'b';
-            case 12:
-               return 'c';
-            case 13:
-               return 'd';
-            case 14:
-               return 'e';
-            case 15:
-               return 'f';
-            default:
-               return toString(num);
+            case 10: return 'a';
+            case 11: return 'b';
+            case 12: return 'c';
+            case 13: return 'd';
+            case 14: return 'e';
+            case 15: return 'f';
+            default: return toString(num);
          }
       };
 
@@ -90,9 +83,11 @@ if (!Math._toHex) {
              intAbs = this.floor(abs),
              integer = int(intAbs),
              decimal = dec(abs - intAbs),
-             result = Number.isInteger(num) ? integer : integer + decimal;
+             float = integer + decimal,
+             result = Number.isInteger(num) ? integer : float,
+             negResult = '-' + result;
 
-         return num >= 0 ? result : '-' + result;
+         return num >= 0 ? result : negResult;
       };
 
       return function(num) {
