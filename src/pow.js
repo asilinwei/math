@@ -39,12 +39,9 @@ if (!Math._pow) {
       };
 
       return function(x, y) {
-         if (x === undefined || y === undefined) {
-            return NaN;
-         }
          x = Number(x);
          y = Number(y);
-         
+              
          if (isNaN(x) || isNaN(y)) {
             return NaN;
          }
@@ -53,6 +50,12 @@ if (!Math._pow) {
                return 0;
             }
             return Infinity;
+         }
+         if (this.abs(x) >= Number.MAX_SAFE_INTEGER || this.abs(y) >= Number.MAX_SAFE_INTEGER) {
+            return Infinity;
+         }
+         if (this.abs(x) === Number.MIN_VALUE && this.abs(y) === Number.MIN_VALUE) {
+            return x > 0 ? 1 : NaN;
          }
          return pow.apply(this, [x, y]);
       };
