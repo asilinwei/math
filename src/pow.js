@@ -6,6 +6,14 @@ if (!Math._pow) {
          return value !== value;
       };
 
+      var isPositiveZero = function(num) {
+         return num === 0 && 1 / num === Infinity;
+      };
+
+      var isNegativeZero = function(num) {
+         return num === 0 && 1 / num === -Infinity;
+      };
+
       var calculate = function(x, y) {
          for (var i = 0, result = 1; i < Math.abs(y); i += 1) {
             result *= x;
@@ -45,16 +53,29 @@ if (!Math._pow) {
          if (isNaN(x) || isNaN(y)) {
             return NaN;
          }
-         if (this.abs(x) === Infinity || this.abs(y) === Infinity) {
-            if (x < 0 || y < 0) {
-               return 0;
+         if (this.abs(y) === Infinity) {
+            if (y > 0) {
+               return this.abs(x) < 1 ? 0 : Infinity;
+            } else {
+               return this.abs(x) < 1 ? Infinity : 0;
             }
-            return Infinity;
          }
-         if (this.abs(x) >= Number.MAX_SAFE_INTEGER || this.abs(y) >= Number.MAX_SAFE_INTEGER) {
-            return Infinity;
+         if (this.abs(y) >= Number.MAX_SAFE_INTEGER) {
+            if (this.abs(x) === 1 || x === 0 && y > 0) {
+               return x;
+            } else if (this.abs(x) > 1 && y > 0 || this.abs(x) && this.abs(x) < 1 && y < 0) {
+               return x > 0 ? Infinity : -Infinity;
+            } else if (this.abs(x) > 1 && y < 0 || this.abs(x) && this.abs(x) < 1 && y > 0) {
+               return x > 0 ? 0 : -0;
+            } else if (y < 0) {
+               if (isPositiveZero(x)) {
+                  return Infinity;
+               } else if (isNegativeZero(x)) {
+                  return -Infinity;
+               }
+            }
          }
-         if (this.abs(x) === Number.MIN_VALUE && this.abs(y) === Number.MIN_VALUE) {
+         if (this.abs(y) === Number.MIN_VALUE) {
             return x > 0 ? 1 : NaN;
          }
          return pow.apply(this, [x, y]);
