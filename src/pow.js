@@ -5,7 +5,7 @@
  *
  * @description 
  * Return the base to the exponent power. 
- * See (`Math.pow`)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow]
+ * See (`Math.pow`)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow].
  * 
  * @param {number} x The base number.
  * @param {number} y The exponent used to raise the base.  
