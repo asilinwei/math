@@ -1,7 +1,29 @@
+/**
+ * 2018-10-31
+ * @copyright 2018 LinWei
+ * @author LinWei
+ *
+ * @description 
+ * Return the base to the exponent power. 
+ * See (`Math.pow`)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow]
+ * 
+ * @param {number} x The base number.
+ * @param {number} y The exponent used to raise the base.  
+ * @return {number} A number representing the given base taken to the power of the given exponent.
+ * @example
+ *
+ * Math._pow(2, 3)
+ * // => 8 
+ *
+ * Math._pow(4, 0.5)
+ * // => 2
+ */
+
 if (!Math._pow) {
    Math._pow = (function() {
       "use strict";
 
+      // Check if it is NaN.
       var isNaN = function(value) {
          return value !== value;
       };
@@ -13,6 +35,7 @@ if (!Math._pow) {
          return result;
       };
 
+      // Convert to integer.
       var toInt = function(num) {
          var str = String(num),
             int = '',
