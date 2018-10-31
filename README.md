@@ -10,7 +10,25 @@ See [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Glo
 Note:     
 No support to Internet Explorer.     
       
-APIs:    
+APIs:   
+```
+Math._pow
+```     
+Description:     
+Return the base to the exponent power.     
+         
+[source](https://github.com/asilinwei/math/blob/master/src/pow.js)      
+See [Math.pow](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow)        
+        
+Example:     
+```
+Math._pow(2, 3)
+// => 8
+
+Math._pow(4, 0.5)
+// => 2
+```                 
+--------------------------------------------------- 
 ```
 Math._sqrt
 ```     
