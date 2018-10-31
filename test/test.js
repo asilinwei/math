@@ -252,4 +252,3 @@ describe('Math._pow', function() {
    });
 });
 
-console.log(Math._pow(-Infinity,Number.MAX_SAFE_INTEGER));
